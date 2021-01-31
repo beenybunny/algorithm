@@ -18,7 +18,7 @@ def solution(N, stages):
         try: failure_rate[i]= trying[i]/reaching[i]
         except:pass
     
-    answer = {i:failure_rate[i] for i in range(N)}
+    answer = {i:failure_rate[i] for i in range(N)} #list to dict인데 list의 값을 사전의 값(키가 아닌)
     answer = sorted(answer.items(),reverse=True,key=lambda item: item[1])#값을 기준으로 내림차순
     
     stage_desc= []
